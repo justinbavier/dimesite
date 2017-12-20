@@ -44,7 +44,7 @@ const Decorators = [
 export default class Mobile extends React.Component{
   autoScroll() {
     window.scroll({
-    top: 900,
+    top: 550,
     left: 0,
     behavior: 'smooth'
     });
