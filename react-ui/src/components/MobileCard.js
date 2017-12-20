@@ -63,7 +63,7 @@ export default class MobileCard extends React.Component{
           <div className='section' style={{ height: '5rem' }}/>
         {/*email signup form*/}
         </div>
-        <div className='section' style={{ height: '11rem' }} />
+        <div className='section' style={{ height: '7rem' }} />
       </div>
     </div>
   )
