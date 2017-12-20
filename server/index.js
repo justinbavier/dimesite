@@ -18,9 +18,9 @@ app.get('/api', function (req, res) {
   console.log('you');
 });
 
-var mailchimpInstance   = 'us17',
-    listUniqueId        = 'e82ebe72df',
-    mailchimpApiKey     = '0766648771752513019957abfeb535ae-us17';
+var mailchimpInstance   = process.env.MAILCHIMP_INSTANCE,
+    listUniqueId        = process.env.NEWSLETTER_ID,
+    mailchimpApiKey     = process.env.MAILCHIMP_API_KEY;
 
 app.post('/api/signup', function (req, res) {
   request
