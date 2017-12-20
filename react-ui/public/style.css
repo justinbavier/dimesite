@@ -15,7 +15,7 @@ body {
 
 @media (max-width: 750px) {
   body {
-    overflow: scroll;
+    overflow: auto;
     background-size: cover;
     background-attachment: fixed;
   }
