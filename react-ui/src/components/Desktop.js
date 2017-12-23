@@ -38,14 +38,12 @@ export default class Desktop extends React.Component{
     render() {
       return (<div>
       <div className='container'>
-
-
         {/*dime logo*/}
         <div className='row col s8' style={{ paddingTop: '5%' }}>
           <img className='responsive-img col s6 offset-s3' src={dime}/>
         </div>
         {/*app pitch graphics*/}
-        <div className='card z-depth-5'>
+        <div className='card z-depth-5' style={{ height: '40rem' }}>
           <div className='card-content'>
             <div className='row col s8'>
               <img className='responsive-img col s2 offset-s1' src={donate}/>

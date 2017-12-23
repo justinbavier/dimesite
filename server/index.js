@@ -42,6 +42,7 @@ app.post('/api/signup', function (req, res) {
             } else {
               // res.send('Sign Up Failed :(')
               // .then(console.log(err))
+              console.log(err)
               res.redirect('/fail');
             }
         });

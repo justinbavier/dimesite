@@ -58,7 +58,7 @@ export default class Mobile extends React.Component{
           <img className='center-align dime' src={dime}/>
         </div>
         {/*app pitch graphics*/}
-        <div className='card-content center-align' style={{ paddingTop: '5rem'}}>
+        <div className='card-content center-align' style={{ paddingTop: '3rem'}}>
           <Carousel
             autoplay='true'
             autoplayInterval='3000'
@@ -71,7 +71,7 @@ export default class Mobile extends React.Component{
               <img src={invest} style={{ height: '13rem'}}/>
           </Carousel>
         </div>
-        <div className='center-align' style={{ paddingTop: '2.5rem' }}>
+        <div className='center-align' style={{ paddingTop: '4.5rem' }}>
            <a className='btn-floating btn-large transparent z-depth-0' onClick={this.autoScroll}><i className="material-icons" style={{ fontSize: '2.5rem' }}>keyboard_arrow_down</i></a>
         </div>
         {/*email signup form*/}

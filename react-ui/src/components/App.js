@@ -12,8 +12,6 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: null,
-      fetching: true,
       width: window.innerWidth
     };
   }

@@ -39,31 +39,6 @@ body {
   background-color: #2B2F37 !important;
 }
 
-.page-footer {
-  background-color: #353840  !important;
-  height: 5rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.page-footer .p {
-  font-size: 10px;
-}
-
-.btn-floating {
-  background-color: #2B2F37 !important;
-}
-
-.nav-wrapper {
-  margin-top: .5rem;
-}
-
-.row .btn .a {
-  font-size: 50px;
-}
-
 .card {
   background-color: #434753 !important;
   border-radius: 15px !important;
