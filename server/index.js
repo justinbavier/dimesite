@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('superagent');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.json());
@@ -18,9 +19,9 @@ app.get('/api', function (req, res) {
   console.log('you');
 });
 
-var mailchimpInstance   = process.env.MAILCHIMP_INSTANCE,
-    listUniqueId        = process.env.NEWSLETTER_ID,
-    mailchimpApiKey     = process.env.MAILCHIMP_API_KEY;
+var mailchimpInstance   = process.env.MAILCHIMP_INSTANCE, //'us17'
+    listUniqueId        = process.env.NEWSLETTER_ID, //'e82ebe72df'
+    mailchimpApiKey     = process.env.MAILCHIMP_API_KEY; //'0766648771752513019957abfeb535ae-us17'
 
 app.post('/api/signup', function (req, res) {
   request
@@ -37,21 +38,19 @@ app.post('/api/signup', function (req, res) {
       })
           .end(function(err, response) {
             if (response.status < 300 || (response.status === 400 && response.body.title === "Member Exists")) {
-              res.send('Signed Up!');
+              res.redirect('/success');
             } else {
-              res.send('Sign Up Failed :(');
-              console.log(err)
+              // res.send('Sign Up Failed :(')
+              // .then(console.log(err))
+              res.redirect('/fail');
             }
         });
-
 });
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('/*', function(request, response) {
   response.sendFile(path.resolve(__dirname, '../react-ui/public', 'index.html'));
 });
-
-
 
 app.listen(PORT, function () {
   console.log(`Listening on port ${PORT}`);

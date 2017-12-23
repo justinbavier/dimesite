@@ -21,6 +21,7 @@ export default class App extends Component {
   componentWillMount() {
     window.addEventListener('resize', this.handleWindowSizeChange);
   }
+
   handleWindowSizeChange = () => {
     this.setState({ width: window.innerWidth });
   };
